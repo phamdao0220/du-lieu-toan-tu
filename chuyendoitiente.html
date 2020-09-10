@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="tiente">
+from:
+<select name="" id="F">
+    <option value="23000">viet nam</option>
+    <option value="5">lao</option>
+    <option value="1">USD</option>
+    <option value="0.8">EURO</option>
+</select>
+to:
+<select name="" id="T">
+    <option value="23000">viet nam</option>
+    <option value="5">lao</option>
+    <option value="1">USD</option>
+    <option value="0.8">EURO</option>
+</select>
+<input type="button" value="quy doi" onclick="quydoi()" >
+
+ket qua : <input type="text" id="ketqua">
+
+<script>
+    function quydoi(){
+        let from = document.getElementById('F').value;
+        let to = document.getElementById('T').value;
+        let money = document.getElementById('tiente').value;
+        let result = to * money/ from;
+        document.getElementById('ketqua').value = result;
+
+    }
+</script>
+</body>
+</html>
